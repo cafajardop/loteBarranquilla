@@ -18,10 +18,10 @@
       <nav class="rk-navigation">
         <ul class="rk-menu">
           <li routerLinkActive="active" class="rk-menu__item">
-            <a routerLink="home" class="rk-menu__link">Home</a>
+            <a routerLink="home" class="rk-menu__link">Inicio</a>
           </li>
           <li routerLinkActive="active" class="rk-menu__item">
-            <a routerLink="about" class="rk-menu__link">About</a>
+            <a routerLink="about" class="rk-menu__link">Información</a>
             <nav class="rk-menu__sub">
               <ul class="rk-container">
                 <li class="rk-menu__item"><a href="portfolio.html" class="rk-menu__link">Blog</a></li>
@@ -45,17 +45,25 @@
             </nav>
           </li>
           <li routerLinkActive="active" class="rk-menu__item">
-            <a href="contact.html" class="rk-menu__link">Contact Us</a>
+            <a href="contact.html" class="rk-menu__link">Contacto</a>
           </li>
         </ul>
-        <form class="rk-search">
-          <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+        
+        <!-- Busqueda  -->
+        <div class="rk-search">
+          <input  type="text" 
+                  (keyup.enter)="buscarProducto(txtBuscar.value)"
+                  placeholder="Buscar..." 
+                  id="urku-search" 
+                  class="rk-search-field"
+                  #txtBuscar>
           <label for="urku-search">
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-search"></use>
             </svg>
           </label>
-        </form>
+        </div>
+
       </nav>
     </div>
   </header>
